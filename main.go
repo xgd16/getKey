@@ -2,14 +2,14 @@ package main
 
 import (
 	"crypto/rand"
-	"fmt"
+	"github.com/fatih/color"
 	"github.com/gogf/gf/v2/encoding/gbase64"
 	"github.com/gogf/gf/v2/text/gstr"
 	"io"
 )
 
 func main() {
-	fmt.Println("KEY:", Random(64))
+	_, _ = color.Set(color.BgBlack, color.Bold, color.FgRed).Printf("KEY: %s", Random(64))
 }
 
 func Random(length int) string {
